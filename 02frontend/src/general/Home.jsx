@@ -91,7 +91,7 @@ const Home = () => {
                   className="inline-block bg-white text-black text-sm font-medium px-4 py-2 rounded-lg shadow-md"
                   onClick={(e) => {
                     e.preventDefault()
-                    navigate(`/foodpartner/${fooditems[0].foodpartner}`)
+                    navigate(`/foodpartner/${item.foodpartner}`)
                   }
                     
                   }

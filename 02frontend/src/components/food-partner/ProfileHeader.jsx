@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfileHeader = ({
   fullName = 'The Tasty Spoon',
-  address = 'Downtown Market, City',
+  address = 'not mentioned',
   totalMeals = 1240,
   customers = 830,
 }) => {

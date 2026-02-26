@@ -1,10 +1,13 @@
 const foodpartnerModel = require('../modules/foodpartner.module')
+const foodModule = require('../modules/food.module')
 
 async function findpartner(req , res ) {
     const _id = req.params.id
      
     try{
         const foodpartner = await foodpartnerModel.findById(_id)
+        const foodItemsByFoodpartner = await foodModule.find({foodpartner:_id})
+
 
         if(!foodpartner){
             return res.status(400).json({
@@ -14,7 +17,8 @@ async function findpartner(req , res ) {
 
         return res.status(200).json({
             message:"data fetched",
-            foodpartner
+            foodpartner,
+            fooditems:foodItemsByFoodpartner,
         })
 
     } catch (err){

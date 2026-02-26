@@ -13,7 +13,7 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cookiesParser())
 app.use(cors({
-    origin: "http://localhost:5173",  // your React URL
+    origin: "http://localhost:5173",  // your React URl
     credentials: true
 }));
 
